@@ -1,0 +1,24 @@
+<div id="carousel" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+      <img class="d-block img-fluid" src="<%= image_path('saveblood.png') %>">
+    </div>
+</div>
+<div class="card">
+  <div class="card-body ">
+   <div class="d-flex justify-content-center">
+  <div class="card card bg shadow-lg p-7 mb-5" style="width: 75%;">
+    <div class="card-body">
+      <div class="col-md-5 offset-md-4 mt-5">
+        <%= simple_form_for :form,url: '#', method: :get do |f|%>
+            <%= f.input :blood_id, :as=> :integer , :label => "Blood Id " %>
+          <br>
+          <div class="d-grid">
+            <%= f.submit 'Check Status', class: 'btn btn-primary', id: 'checkStatusBtn'%>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<h1 class="text-center mt-2">Collected Blood Units</h1><br>
+
+
+<div class="d-flex justify-content-center">
+  <div class="row">
+    <% @bloodDatas.each do |bloodData| %>
+      <div class="col-12 col-md-12">
+        <div class="card bg-light">
+          <div class="card-body shadow-lg">
+            <h5 class="card-title text-center">Blood Id : <%= bloodData.blood_unique_id %></h5>
+            <p class="card-text">
+              <strong>Blood Group  :</strong> <%= bloodData.blood_group %><br>
+             <strong>Donated Time  :</strong> <%= Time.at(bloodData.donated_time).strftime("%Y-%m-%d %H:%M:%S") %><br>
+            </p>
+          </div>
+        </div><br>
+      </div>
+    <% end %>
+  </div>
+</div>
